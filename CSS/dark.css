@@ -1,0 +1,145 @@
+/* Global Rules */
+:root {
+  --prim-color: #a00037;
+  --sec-color: #004c8c;
+}
+* {
+  transition: 0.5s ease-in-out;
+}
+/* end */
+body {
+  font-family: 'Roboto Mono', monospace;
+  background-color: #001219;
+  color: #fff;
+}
+.custimize {
+  display: flex;
+  justify-content: space-evenly;
+  margin: 15px 0 3em;
+  align-items: center;
+}
+.custimize button {
+  color: white;
+  background-color: var(--sec-color);
+  padding: 15px 10px;
+  border-radius: 25px;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+}
+.custimize button:hover {
+  background-color: #58a5f0;
+}
+.custimize label {
+  font-weight: bold;
+}
+.custimize select {
+  color: white;
+  background-color: var(--sec-color);
+  font-weight: bold;
+  text-align: center;
+  border-radius: 14px;
+  padding: 3px 5px;
+}
+.custimize select:focus {
+  outline: none;
+}
+.custimize option {
+  background-color: #58a5f0;
+}
+.container {
+  width: 500px;
+  margin: 20px auto;
+}
+.form {
+  background-color: var(--prim-color);
+  border-radius: 6px;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+}
+.input {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  flex: 1;
+  color: white;
+  background-color: #3a0ca3;
+}
+.input:focus {
+  outline: none;
+}
+.add,
+.rem {
+  border: none;
+  background-color:var(--sec-color);
+  color: white;
+  padding: 10px;
+  border-radius: 6px;
+  margin-left: 10px;
+  cursor: pointer;
+  transition: 0.5s;
+}
+.rem {
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-top: 26px;
+}
+.rem:hover,
+.add:hover {
+  background-color: #58a5f0;
+}
+.tasks {
+  background-color: var(--prim-color);
+  margin-top: 20px;
+  border-radius: 6px;
+  padding: 20px;
+}
+.tasks .task {
+  background-color: var(--sec-color);
+  padding: 10px;
+  border-radius: 6px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: 0.3s;
+  cursor: pointer;
+  border: 1.5px solid white;
+}
+.tasks .task:not(:last-child) {
+  margin-bottom: 15px;
+}
+.tasks .task:hover {
+  background-color: #58a5f0;
+}
+.tasks .task.done {
+  opacity: 0.5;
+}
+.tasks .task span {
+  font-weight: bold;
+  font-size: 10px;
+  background-color: #ff5c8d;
+  color: white;
+  padding: 2px 6px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+@media (max-width: 768px) {
+  .custimize {
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+  }
+  .custimize > div:first-child {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+  }
+  .container {
+    max-width: 100%;
+  }
+}
